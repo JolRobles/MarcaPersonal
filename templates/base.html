@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--INDEX DE LANDING PAGE-->
+<html lang="es">
+{% load staticfiles %}
+{% load bootstrap4 %}
+{% block header %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{% block title %}  {% endblock title %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="{% static 'apple-touch-icon.png' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontAwesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/templatemo-style.css' %}">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <script src="{% static 'js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+</head>
+{% endblock header %}
+
+<body>
+  {% block content %}
+
+
+  {% endblock content %}
+   	{% block contact_us %}
+    <footer>
+      <p>
+        Sigueme
+        <i><a href="https://www.facebook.com/jolrobless/"><i class="fa fa-facebook"></i></a></i>
+        <i><a href="#"><i class="fa fa-twitter"></i></a></i>
+        <i><a href="#"><i class="fa fa-linkedin"></i></a></i>
+        <i><a href="#"><i class="fa fa-rss"></i></a></i>
+        <i><a href="#"><i class="fa fa-behance"></i></a></i>
+        <br>
+        Copyright &copy; 2019 JYSYS
+
+      | Diseñado por <a href="https://www.facebook.com/jysysloja" target="_parent"><em>Jysys</em></a>
+    </p>
+    </footer>
+
+   	{% endblock contact_us %}
+
+	{% block scripts %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{% static 'js/vendor/jquery-1.11.2.min.js' %}"><\/script>')</script>
+
+    <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+	{% endblock scripts %}
+  </body>
+</html>

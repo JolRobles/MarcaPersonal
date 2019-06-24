@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<script>
+	// Columna ID en orden descendente
+	$(document).ready(function() {
+	    $('#datatable').DataTable( {
+	        "order": [[ 1, "desc" ]]
+	    } );
+	} );
+</script>
+<div class="clearfix"></div>
+  <div class="cd-full-width first-slide">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="content first-content" id="datatable">
+            {% for blog in blogs %}
+              <h4>{{blog.titulo}}</h4>
+              <p>{{blog.contenido}}</p>
+              <div class="primary-button">
+                <a href="{% url 'contenido:blog_detail' blog.pk %}">Ver más</a>
+              </div>
+              <br>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>

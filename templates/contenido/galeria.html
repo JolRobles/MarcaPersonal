@@ -1,0 +1,39 @@
+{% load staticfiles %}
+<div class="cd-half-width fourth-slide">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="content fourth-content">
+          <div class="row">
+            {% for imagen in imagenes %}
+            <div class="col-md-3 project-item">
+              <a href="{{ object.image.url }}" data-lightbox="image-1"><img src="{{ object.image.url }}"></a>
+            </div>
+            {% endfor %}
+            <div class="col-md-3 project-item">
+              <a href="{% static 'img/item-02.jpg' %}" data-lightbox="image-1"><img src="{% static 'img/project-item-02.jpg' %}"></a>
+            </div>
+            <div class="col-md-3 project-item">
+              <a href="{% static 'img/item-03.jpg' %}" data-lightbox="image-1"><img src="{% static 'img/project-item-03.jpg' %}"></a>
+            </div>
+            <div class="col-md-3 project-item">
+              <a href="{% static 'img/item-04.jpg' %}" data-lightbox="image-1"><img src="{% static 'img/project-item-04.jpg' %}"></a>
+            </div>
+            <div class="col-md-3 project-item">
+              <a href="{% static 'img/item-05.jpg' %}" data-lightbox="image-1"><img src="{% static 'img/project-item-05.jpg' %}"></a>
+            </div>
+            <div class="col-md-3 project-item">
+              <a href="{% static 'img/item-06.jpg' %}" data-lightbox="image-1"><img src="{% static 'img/project-item-06.jpg' %}"></a>
+            </div>
+            <div class="col-md-3 project-item">
+              <a href="{% static 'img/item-07.jpg' %}" data-lightbox="image-1"><img src="{% static 'img/project-item-07.jpg' %}"></a>
+            </div>
+            <div class="col-md-3 project-item">
+              <a href="{% static 'img/item-08.jpg' %}" data-lightbox="image-1"><img src="{% static 'img/project-item-08.jpg' %}"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

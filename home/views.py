@@ -1,14 +1,18 @@
 from django.shortcuts import render, redirect
 from .models import *
-from contenido.models import Blog, Galeria
+from contenido.models import Blog, Galeria, AboutMe, Proyecto
 
 # Create your views here.
 def index(request):
 	blogs = Blog.objects.all()
 	imagenes = Galeria.objects.all()
+	about_me = AboutMe.objects.all()
+	proyectos = Proyecto.objects.all()
 	context = {
 		'blogs':blogs,
 		'imagenes':imagenes,
+		'about_me': about_me,
+		'proyectos': proyectos,
 
 	}
 	return render(request, 'index.html', context)
